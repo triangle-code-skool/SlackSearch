@@ -1,0 +1,137 @@
+[
+    {
+        "slack_id": "U887766",
+        "seed_identity": {
+            "real_name": "Alice Chen",
+            "display_name": "AliceC_Dev",
+            "email": "alice.chen@example.com",
+            "phone": "+1-555-0102",
+            "tz_label": "America/Los_Angeles"
+        },
+        "osint_enrichment": {
+            "google_search_query": "site:linkedin.com \"Alice Chen\" \"555-0102\"",
+            "social_matches": [
+                {
+                    "platform": "LinkedIn",
+                    "url": "https://linkedin.com/in/alice-chen-dev-SF",
+                    "match_confidence": "HIGH",
+                    "evidence": "Phone number + Name match in contact info"
+                },
+                {
+                    "platform": "GitHub",
+                    "url": "https://github.com/chen-alice-code",
+                    "match_confidence": "MEDIUM",
+                    "evidence": "Email handle match"
+                }
+            ]
+        },
+        "meta": {
+            "processed_at": "2023-10-27T14:30:00Z",
+            "crawler_version": "v1.0",
+            "calculated_likelihood_score": 95.5
+        }
+    },
+    {
+        "slack_id": "U991122",
+        "seed_identity": {
+            "real_name": "John Smith",
+            "display_name": "JSmith",
+            "email": "john.smith@example.com",
+            "phone": null,
+            "tz_label": "America/New_York"
+        },
+        "osint_enrichment": {
+            "google_search_query": "site:linkedin.com \"John Smith\" \"New York\"",
+            "social_matches": [
+                {
+                    "platform": "LinkedIn",
+                    "url": "https://linkedin.com/in/jsmith-1234",
+                    "match_confidence": "LOW",
+                    "evidence": "Name matches, but name is common. No phone verification."
+                }
+            ]
+        },
+        "meta": {
+            "processed_at": "2023-10-27T14:35:00Z",
+            "crawler_version": "v1.0",
+            "calculated_likelihood_score": 20.0
+        }
+    },
+    {
+        "slack_id": "U101010",
+        "seed_identity": {
+            "real_name": "Emily Blunt",
+            "display_name": "EmB",
+            "email": "emily.blunt@example.com",
+            "phone": "+44-20-7946-0958",
+            "tz_label": "Europe/London"
+        },
+        "osint_enrichment": {
+            "google_search_query": "site:twitter.com \"Emily Blunt\" \"London\"",
+            "social_matches": [
+                {
+                    "platform": "Twitter",
+                    "url": "https://twitter.com/emilyblunt_real",
+                    "match_confidence": "HIGH",
+                    "evidence": "Verified account match"
+                }
+            ]
+        },
+        "meta": {
+            "processed_at": "2023-10-28T09:15:00Z",
+            "crawler_version": "v1.1",
+            "calculated_likelihood_score": 88.0
+        }
+    },
+    {
+        "slack_id": "U202020",
+        "seed_identity": {
+            "real_name": "Michael Chang",
+            "display_name": "MikeC",
+            "email": "michael.chang@example.com",
+            "phone": "+1-415-555-1234",
+            "tz_label": "America/Los_Angeles"
+        },
+        "osint_enrichment": {
+            "google_search_query": "site:github.com \"Michael Chang\" \"San Francisco\"",
+            "social_matches": [
+                {
+                    "platform": "GitHub",
+                    "url": "https://github.com/mikechang-dev",
+                    "match_confidence": "MEDIUM",
+                    "evidence": "Location and name match"
+                },
+                {
+                    "platform": "LinkedIn",
+                    "url": "https://linkedin.com/in/michael-chang-sf",
+                    "match_confidence": "HIGH",
+                    "evidence": "Work history matches internal records"
+                }
+            ]
+        },
+        "meta": {
+            "processed_at": "2023-10-28T10:00:00Z",
+            "crawler_version": "v1.1",
+            "calculated_likelihood_score": 92.5
+        }
+    },
+    {
+        "slack_id": "U303030",
+        "seed_identity": {
+            "real_name": "Sarah Connor",
+            "display_name": "SConnor",
+            "email": "sarah.connor@example.com",
+            "phone": null,
+            "tz_label": "America/Chicago"
+        },
+        "osint_enrichment": {
+            "google_search_query": "site:facebook.com \"Sarah Connor\" \"Chicago\"",
+            "social_matches": []
+        },
+        "meta": {
+            "processed_at": "2023-10-28T11:30:00Z",
+            "crawler_version": "v1.1",
+            "calculated_likelihood_score": 10.0
+        }
+    }
+]

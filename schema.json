@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Slack OSINT Profile List",
+    "description": "A list of user profiles enriched with external OSINT data.",
+    "type": "array",
+    "items": {
+        "title": "Slack OSINT Profile",
+        "description": "Schema for a user profile enriched with external OSINT data.",
+        "type": "object",
+        "properties": {
+            "slack_id": {
+                "type": "string",
+                "description": "Unique ID from Slack (e.g., U12345)"
+            },
+            "seed_identity": {
+                "type": "object",
+                "properties": {
+                    "real_name": {
+                        "type": "string"
+                    },
+                    "display_name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "tz_label": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "real_name"
+                ]
+            },
+            "osint_enrichment": {
+                "type": "object",
+                "properties": {
+                    "google_search_query": {
+                        "type": "string"
+                    },
+                    "social_matches": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "platform": {
+                                    "type": "string",
+                                    "enum": [
+                                        "LinkedIn",
+                                        "Instagram",
+                                        "Twitter",
+                                        "Facebook",
+                                        "GitHub",
+                                        "Other"
+                                    ]
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "format": "uri"
+                                },
+                                "match_confidence": {
+                                    "type": "string",
+                                    "enum": [
+                                        "HIGH",
+                                        "MEDIUM",
+                                        "LOW"
+                                    ]
+                                },
+                                "evidence": {
+                                    "type": "string",
+                                    "description": "Why we think this is a match (e.g., 'Same phone number found')"
+                                }
+                            },
+                            "required": [
+                                "platform",
+                                "url",
+                                "match_confidence"
+                            ]
+                        }
+                    }
+                }
+            },
+            "meta": {
+                "type": "object",
+                "properties": {
+                    "processed_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "crawler_version": {
+                        "type": "string"
+                    },
+                    "calculated_likelihood_score": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 100,
+                        "description": "Final aggregated 0-100 score of identity verification"
+                    }
+                }
+            }
+        },
+        "required": [
+            "slack_id",
+            "seed_identity",
+            "meta"
+        ]
+    }
+}
