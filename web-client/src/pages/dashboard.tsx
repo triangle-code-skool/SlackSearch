@@ -1,9 +1,6 @@
-import NavBar from "../components/NavBar";
-
 const Dashboard = () => {
   return (
     <div>
-      <NavBar />
       <h1 className="text-3xl">
         Dashboard
       </h1>
