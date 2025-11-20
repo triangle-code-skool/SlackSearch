@@ -43,6 +43,9 @@ export default function NavBar() {
                     <Link href="/dashboard" className="text-gray-300 hover:text-white">
                         Dashboard
                     </Link>
+                    <Link href="/profile/profileSearch" className="text-gray-300 hover:text-white">
+                        Profile  
+                    </Link>
 
                     <div className="relative group">
                         <button
