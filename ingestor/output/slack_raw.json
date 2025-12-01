@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Alice Chen",
+    "phone": "+1-555-0102",
+    "email": "alice.chen@example.com"
+  },
+  {
+    "name": "John Smith",
+    "phone": null,
+    "email": "john.smith@example.com"
+  },
+  {
+    "name": "Emily Blunt",
+    "phone": "+44-20-7946-0958",
+    "email": "emily.blunt@example.com"
+  },
+  {
+    "name": "Michael Chang",
+    "phone": "+1-415-555-1234",
+    "email": "michael.chang@example.com"
+  },
+  {
+    "name": "Sarah Connor",
+    "phone": null,
+    "email": "sarah.connor@example.com"
+  }
+]
